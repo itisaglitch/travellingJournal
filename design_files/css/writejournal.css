@@ -1,0 +1,94 @@
+html {
+  font-family: "Helevetica", sans-serif;
+}
+
+.editor {
+  width: 42%;
+  height: 400px;
+  color: #333;
+  margin-top: 65px;
+  margin-left: 150px;
+  margin-bottom: 90px;
+  background-color: white;  
+  opacity: 0.8;
+  border-radius: 15px;
+  align-self: center;
+  position: relative;
+}
+
+div:focus {
+  outline: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+#NameOfPlace {
+  font-size: 18px;
+  padding-top: 5px;
+  padding-left: 10px;
+
+}
+
+#Review {
+  padding-top: 6px;
+  font-size: 16px;
+  padding-left: 12px;
+
+
+}
+
+.sharebutton{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: 8px;
+  background-color: #c48b5a; /* Green */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 15px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;    
+
+}
+.addlocation{
+ 
+}
+
+
+.editingjournal {
+  width: 50%;
+  border-radius: 17px;
+  height: 400px;
+  color: #333;
+  margin-top: 65px;
+  margin-left: 150px;
+  background-color: white;  
+  opacity: 0.4;
+  align-self: center;
+  position: relative;
+}
+
+.editbutton{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: 8px;
+  background-color: #c48b5a; /* Green */
+  color: white;
+  padding: 13px 20px;
+  border: none;
+  border-radius: 15px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;    
+}

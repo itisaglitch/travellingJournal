@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"lang="en" xml:lang="en">
+<html>
+<head>
+		<style>
+		#map1 {
+		margin: 0;
+		padding: 0;
+		position: absolute;
+		top : 70px;
+		left: 800px;
+		bottom: 70px;
+		right: 40px;
+		}
+		.notes {
+		  width: 45%;
+		  height: 100px;
+		  margin-top: 30px;
+		  margin-left: 125px;
+		}
+		.article {
+		  width: 90%;
+		  height: 70px;
+		  margin-left: 30px;
+		  overflow: hidden;
+		}
+		.parent {
+  		width: 100%;
+		height: 60px;
+		background-color:  #c2871b;	
+}
+
+
+		</style>
+	<script src="https://apis.mapmyindia.com/advancedmaps/v1/cvjsnu2wgi9kpo8ryb8wtxxfpxhlohaz/map_load?v=1.5"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+	    <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	    <link rel="stylesheet" href="design_files/css/homestyle.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<meta name='viewport' content='width=device-width, initial-scale=1'>
+		<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+   		<link rel="stylesheet" href="design_files/css/writejournal.css" />
+		<script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+	    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-database.js"></script>
+	    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-auth.js"></script>
+	    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-firestore.js"></script>
+	    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-storage.js"></script>
+				
+</head>
+<body style="background-image: url('design_files/images/viewother.png')" >
+		
+
+		<div class="parent">
+		<span class="username" style="font-size:30px;cursor:pointer;margin:12px 150px 12px 10px; position: absolute;top: 3px; " onclick="openNav()">
+			&#9776;
+			<img id = "photo" src =""  style="width:60px;height:60px; border-radius: 50% " > 
+			<p id="Username" style="font-size:20px;margin:-2px 150px 12px 115px; position: absolute;top: 3px;">
+				
+			</p>
+			
+		</span>
+
+		<div id="mySidenav" class="sidenav" >
+		  	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			  <a href="home.html">Dashboard</a>
+			  <a href="AccountSettings.html">My Account</a>
+			  <a onclick="logout()" href="login.html">Logout</a>
+		</div>		
+
+		<div style="opacity: 0.5; position: absolute; top: 13px ; left: 400px; " >
+			
+			<p><button type="button" id="Find" style="width: 200px; border-radius: 18px;" onclick="FollowInitiate()" class="w3-btn w3-white w3-xlarge">Follow Them</button></p>
+
+		</div>
+	</div>	
+		<div class="notes" >
+ 	 	<ul class="w3-ul w3-hoverable" >
+		    <li id="list1" >
+		    	<div>
+		    	<h3 id="Heading1"> </h3>
+		    	
+		    	<p style="overflow: auto;" class="article" id="article1"> </p>
+		    	</div>
+		    	
+		    </li>
+		    <li id="list2">
+		    	<div>
+		    	<h3 id="Heading2"></h3>
+		    	<p style="overflow: auto;" class="article" id="article2"> </p>
+		    	</div>
+		    </li>
+		    <li id="list3">
+		    	<div>
+		    	<h3 id="Heading3"> </h3>
+		    
+		    	<p style="overflow: auto;" class="article" id="article3"></p>
+		    	</div>
+		    </li>
+		    <li id="list4">
+		    	<div>
+		    	<h3 id="Heading4"> </h3>
+		    
+		    	<p style="overflow: auto;" class="article" id="article4"></p>
+		    	</div>
+		    </li>
+		    <li id="list5">
+		    	<div>
+		    	<h3 id="Heading5"> </h3>
+		    	
+		    	<p style="overflow: auto;" class="article" id="article5"></p>
+		    	</div>
+		    </li>
+		    <li id="list6">
+		    	<div>
+		    	<h3 id="Heading6"> </h3>
+		    
+		    	<p style="overflow: auto;" class="article" id="article6"></p>
+		    	</div>
+		    </li>
+	  	</ul>
+		</div>
+
+	<div id = "map1"></div>
+	<script src="nodejs/index.js"></script>
+	
+	<script>
+		function openNav() {
+		  document.getElementById("mySidenav").style.width = "250px";
+		}
+
+		function closeNav() {
+		  document.getElementById("mySidenav").style.width = "0";
+		}
+	</script>
+	<script>guestAccount();</script>
+</body>
+</html>

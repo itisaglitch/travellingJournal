@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<<<<<<< HEAD
+  <body>
+
+	<ol id="myList">
+	  <li>Tea</li>
+	  <li>Milk</li>
+	  <li>Water</li>
+	</ol>
+	<script>
+		var array = ["burger", "chips", "fries","veggies", "toffee"];
+		for(var i=0;i<array.length;i++)
+		{
+			 var x = document.createElement("LI");
+			 
+			 var t = document.createTextNode(array[i]);
+			 t.addEventListener("onclick",clicked)
+			 t.id = toString(i);
+		     x.appendChild(t);
+		     document.getElementById("myList").appendChild(x);
+		}
+		
+		function clicked(){
+			var c = parseInt(event.target.id);
+			console.log("Selected is: "+c);
+		}
+	/*
+		function makeAList(){
+		var itemList = [];
+		var ln = parseInt(event.target.innerText) >=0 ? parseInt(event.target.innerText) + 1 : 30
+		for (i = 0; i < ln; i ++){
+			var p = document.createElement('P')
+			p.innerHTML = i < ln - 1 ? i + ', ' : i
+			p.addEventListener("onclick", makeAList)
+			itemList.push(p);
+		}
+		
+		document.getElementById("count").innerHTML = ''
+		
+		itemList.forEach((x)=>{
+		  document.getElementById("count").append(x)
+		})
+	}	
+	
+	*/
+	</script>
+
+  </body>
+=======
+<head>
+		 <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-firestore.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-storage.js"></script>
+</head>
+<body>
+	<script src="nodejs/index.js"></script>
+	<script>Display()</script>
+	<p id = "test"></p>
+</body>
+>>>>>>> 3958d6c4afd78cd2df5b89bb942e5ef889306620
+</html>

@@ -1,0 +1,203 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+  
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0px;
+  left: 0;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 100px;
+  background-color: #e08f33;
+  opacity: 0.6;
+  padding-top: 80px;
+ 
+}
+.username {
+  padding: 2px;
+  color: #353835;
+}
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.parent {
+  width: 100%;
+  height: 80px;
+}
+
+
+
+.button {
+  background-color: #c48b5a; /* Green */
+  color: white;
+  right: 0;
+  width: 180px;
+  border: none;
+  border-radius: 12px;
+  padding: 14px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin : 12px 40px;
+  cursor: pointer;
+  float: right;
+
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  margin: 12px 0px;
+  border: 1px solid grey;
+  width: 80%;
+  background: #f1f1f1;
+}
+
+form.example button {
+  float: left;
+  width: 20%;
+  margin: 12px 0px;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #0b7dda;
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}  --font-fam: 'Open Sans', sans-serif;
+  --height: 5rem;
+  --btn-width: 6rem;
+  --bez: cubic-bezier(0, 0, 0.43, 1.49);
+}
+
+
+label {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+
+.circle{
+  border:1px solid #000;
+  width:20px;
+  height:20px;
+  border-radius:100%;
+  position:relative;
+  margin:4px;
+  display:inline-block;
+  vertical-align:middle;
+}
+.circle.plus:before,
+.circle.plus:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:green;
+}
+.circle.plus:before{
+    width: 2px;
+    margin: 2px auto;
+}
+.circle.plus:after{
+    margin: auto 2px;
+    height: 2px;
+}
+
+
+.addsign{
+  position: absolute;
+  left: 640px;
+  top: 420px;
+}
+.locationmarker {
+  position: absolute;
+  top: 420px;
+  left: 970px;
+}
+.viewsign {
+  position: absolute;
+  top: 420px;
+  left: 309px;
+}
+.notes {
+  width: 45%;
+  height: 100px;
+  margin-top: 60px;
+  margin-left: 125px;
+}
+
+.articles{
+  white-space: nowrap; 
+  border: 1px solid #000000;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.article {
+  width: 90%;
+  height: 70px;
+  margin-left: 30px;
+  overflow: hidden;
+}
+
+
+
+.placesvisited {
+  position: absolute;
+  top:320px;
+  left: 1050px;
+}

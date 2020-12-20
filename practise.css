@@ -1,0 +1,140 @@
+*{
+	margin : 0;
+	padding: 0;
+}
+
+
+/*.bg {
+	background-image: url('design_files/images/accountSettingsback.jpg');
+	width: 100%;
+	height: 100vh;
+	background-size: 100% 100%;
+
+	___________ for parallax effect __________
+	background-repeat: repeat-y;
+	background-attachment: fixed;
+		___________ for parallax effect __________
+}
+
+
+.bg2 {
+	background-image: url('design_files/images/forgetpasswordcover.jpg');
+	width: 100%;
+	height: 100vh;
+	background-size: 100% 100%;
+		___________ for parallax effect __________
+	background-repeat: repeat-y;
+	background-attachment: fixed;
+		___________ for parallax effect __________
+}*/
+
+/*unvisited link*/
+
+
+/*
+______________ :link property__________________;
+a:link{
+	color: yellow;
+}
+
+a:visited {
+	color: blue;
+}
+a:hover {
+	color: green;
+}
+a:active {
+	color : black;
+}
+*/
+
+
+/*.boxmodel{
+	width: 100%;
+	height: 100vh;
+	background-color: green;
+}
+input {
+	padding: 10px;
+	margin-top: 10px;
+}*/
+
+/*p {
+	width: 200px;
+	height: 200px;
+	border: 0.5px solid black;
+	overflow: scroll;
+}*/
+
+/*.divison{
+	width: 600px;
+	height: 300px;
+	background-color: red;
+	position: relative;
+
+}*/
+/*.subdiv1{
+	width: 100px;
+	height: 60px;
+	background-color: green;
+	position: absolute;*/
+	/*left: 0;*/
+/*}*/
+/*
+
+.subdiv2{
+	width: 100px;
+	height: 60px;
+	background-color: orange;
+	position: absolute;
+	right: 0;
+}
+.subdiv3{
+	width: 100px;
+	height: 60px;
+	background-color: yellow;
+	position: absolute;
+	bottom: 0;
+	right:0;
+}
+.subdiv4{
+	width: 100px;
+	height: 60px;
+	background-color: white;
+	position: absolute;
+	bottom: 0;
+}
+*/
+
+
+.header {
+	width: 100%;
+	height: 80px;
+	background-color: black;
+}
+
+.logo {
+	width: 30%;
+	line-height: 80px; 
+	background-color: orange;
+	text-align: center;
+	float: left;
+}
+
+.menu {
+	width: 70%;
+	line-height: 80px; 
+	background-color: red;
+	text-align: center;
+	float: right;
+	
+}
+
+ul{
+	list-style: none;
+	text-align: right;
+}
+li{
+	display: inline-block; 
+	padding: 0 10px;
+}

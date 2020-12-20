@@ -1,0 +1,144 @@
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<style type="text/css">
+		.parent{
+				width: 100%;
+				height: 60px;
+				background-color:  black;
+				opacity: 0.9;		
+			}
+
+
+			* {
+			  margin: 0;
+			  padding: 0;
+			  box-sizing: border-box;
+			}
+			body {
+			  font-family: 'Alata', sans-serif;
+			
+			}
+			ul {
+		      padding: 25px;
+			  margin-left : 45px;
+			  margin-top : 220px;
+		    }
+		    li {
+		    font-family: 'Open Sans', sans-serif;
+			background-color: black;
+			opacity: 0.9 	;
+			color:white;
+			height: 50px;
+			width : 70%;
+			padding : 15px;
+			padding-left : 25px;
+			list-style-type: none;
+			margin: 1px;
+			border-radius: 5px;
+		    }
+		
+	</style>
+
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+	    <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	    <link rel="stylesheet" href="design_files/css/homestyle.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<meta name='viewport' content='width=device-width, initial-scale=1'>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+	    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-database.js"></script>
+	    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-auth.js"></script>
+	    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-storage.js"></script>
+	    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-firestore.js"></script>
+	</head>
+	<body style="background-image: url(design_files/images/follow.png);">
+		<div class="parent">
+			<span class="username" style="font-size:30px;cursor:pointer;margin:12px 150px 12px 10px;  position: absolute; top:5px" onclick="openNav()">&#9776;
+			<img id = "image" src =""  style="width:60px;height:60px; border-radius: 50% " >
+			<p id="username" style="font-size:20px;margin:-2px 150px 12px 115px; position: absolute;top: 3px;">
+			</p>
+		</span>
+
+			<div id="mySidenav" class="sidenav" style="background-color: black; opacity: 0.6;">
+			  	<a style="color: white;" href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+				  <a style="color: white;" href="home.html">Dashboard</a>
+				  <a  style="color: white;" href="#">My Account</a>
+				  <a style="color: white;" onclick="logout()" href="login.html">Logout</a>
+			</div>		
+
+			<a href="followers.html">
+				<button style="background-color:  #1c3454" class="button followers">
+				Followers
+				</button>
+			</a>
+			<a href="following.html">
+				<button  style="background-color: #1a2e1a"  class="button following">
+					Following
+				</button>
+			</a>
+			<div style="opacity: 0.5; position: absolute; top: 10px ; left: 400px; " >
+			<a href="explore.html" class="text-dark">
+			<p><button type="button" id="Find" style="width: 300px; border-radius: 18px; " class="w3-btn w3-white w3-xlarge">Explore<i class="w3-margin-left fa fa-search"></i></button></p></a>
+
+		</div>
+		</div>
+
+		<div style="width: 60% ;margin-top: 70px; margin-left: 80px " class="w3-container">
+			<ul id ="followinglist">
+			</ul>  
+
+
+			  <!-- <ul class="w3-ul w3-card-4">
+			    <li >
+			      <img src="img_avatar2.png" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+			      <div class="w3-bar-item">
+			        <span class="w3-large">Mike</span><br>
+			      </div>
+			    </li>
+
+			    <li style="background-color:#6383ab "class="w3-bar">
+			      <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-xlarge w3-right">×</span>
+			      <img src="img_avatar5.png" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+			      <div class="w3-bar-item">
+			        <span class="w3-large">Jill</span><br>
+			      </div>
+			    </li>
+
+			    <li style="background-color:#6383ab " class="w3-bar">
+			      <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-xlarge w3-right">×</span>
+			      <img src="img_avatar6.png" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+			      <div class="w3-bar-item">
+			        <span class="w3-large">Jane</span><br>
+			      </div>
+			    </li>
+		 </ul> -->
+	</div>
+	<script src="nodejs/index.js"></script>
+	<script type="text/javascript"> followingLists() </script>
+	<script> listoffollowing() </script>
+		<script>
+		function openNav() {
+		  document.getElementById("mySidenav").style.width = "250px";
+		}
+
+		function closeNav() {
+		  document.getElementById("mySidenav").style.width = "0";
+		}
+	</script>
+	<script type="text/javascript" > imageURL()</script>
+
+	</body>
+	</html>

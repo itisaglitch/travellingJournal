@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		.parent{
+				width: 100%;
+				height: 60px;
+				background-color:  black;
+				opacity: 0.9;		
+			}
+	</style>
+	<script src="https://apis.mapmyindia.com/advancedmaps/v1/cvjsnu2wgi9kpo8ryb8wtxxfpxhlohaz/map_load?v=1.5"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+	    <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	    <link rel="stylesheet" href="design_files/css/homestyle.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<meta name='viewport' content='width=device-width, initial-scale=1'>
+		<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+   		<link rel="stylesheet" href="design_files/css/writejournal.css" />
+		<script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+	    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-database.js"></script>
+	    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-auth.js"></script>
+	    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-firestore.js"></script>
+	    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-storage.js"></script>
+	    <style>
+		#map {
+			margin: 0;
+			padding: 0;
+			position: absolute;
+			top : 70px;
+			left: 800px;
+			bottom: 70px;
+			right: 40px;
+		}
+			
+		</style>
+</head>
+<body style="background-image: url(design_files/images/writearticle.png);">
+	<script src="app.js"></script>
+	<script src="nodejs/index.js"></script>
+	<div class="parent" style="position: relative;left: 0; " >
+		<span class="username" style="font-size:30px;cursor:pointer;margin:12px 150px 12px 10px; position: absolute;top: 3px; " onclick="openNav()">
+			&#9776;
+			<img id = "image" src =""  style="width:60px;height:60px; border-radius: 50% " > 
+			<p id="username" style="font-size:20px;margin:-2px 150px 12px 115px; position: absolute;top: 3px;">
+				
+			</p>
+			
+		</span>
+
+		<div id="mySidenav" class="sidenav" style="background-color: black; opacity: 0.6; ">
+		  	<a style="color: white;" href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			  <a style="color: white;" href="home.html">Dashboard</a>
+			  <a style="color: white;" href="#">My Account</a>
+			  <a style="color: white;" onclick="logout()" href="login.html">Logout</a>
+		</div>		
+	</div>
+	 <div id = "map"></div>
+	<script>mapLoad();</script>
+
+	<div class="editor">
+	 	<input style="border: none;" id="NameOfPlace" type="text" placeholder ="Place Name..."/>
+	 	<br>
+	 	<div style="height: 10px"></div>
+	  	<textarea style="border: none; width: 550px; height: 200px;" id="Review" Placeholder="Write your Journal..."></textarea>
+	  	<button style="background-color: #121110; font-size: 16px; " onclick="AddReview()" class="sharebutton"> Share </button>
+	  	<input style=" position: absolute;right: 5px;bottom: 0; margin-bottom: 18px " type="file" value="upload" id="fileButton"/>
+  	</div>
+   	<script>
+		function openNav() {
+		  document.getElementById("mySidenav").style.width = "250px";
+		}
+
+		function closeNav() {
+		  document.getElementById("mySidenav").style.width = "0";
+		}
+	</script>
+	<script type="text/javascript"> imageURL()</script>
+	
+
+
+
+</body>
+</html>
